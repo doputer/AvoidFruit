@@ -24,6 +24,8 @@ public class Fruit : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.gameObject.tag == "Ground") {
 			Destroy(this.gameObject);
+
+			ScoreManager.setScore(1);
 		}
 	}
 }
