@@ -20,12 +20,4 @@ public class Fruit : MonoBehaviour {
 		moveVelocity = Vector3.down;
 		transform.position += coefficient * moveVelocity * movePower * Time.deltaTime;
 	}
-
-	void OnTriggerEnter2D(Collider2D other) {
-		if (other.gameObject.tag == "Ground") {
-			Destroy(this.gameObject);
-
-			ScoreManager.setScore(1);
-		}
-	}
 }

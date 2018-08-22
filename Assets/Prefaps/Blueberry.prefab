@@ -20,12 +20,12 @@ GameObject:
   m_Component:
   - component: {fileID: 4259993358071994}
   - component: {fileID: 212984255521261764}
-  - component: {fileID: 61651734437503366}
   - component: {fileID: 114167373630996054}
   - component: {fileID: 50541931555853630}
+  - component: {fileID: 61259110670427358}
   m_Layer: 0
   m_Name: Blueberry
-  m_TagString: Untagged
+  m_TagString: Fruit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -63,7 +63,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &61651734437503366
+--- !u!61 &61259110670427358
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -72,7 +72,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

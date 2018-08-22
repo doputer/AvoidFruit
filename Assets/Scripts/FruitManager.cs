@@ -16,7 +16,7 @@ public class FruitManager : MonoBehaviour {
 	IEnumerator makeFruit() {
 		Instantiate(prefab,new Vector3(0,0,0),Quaternion.identity);
 
-		coefficient = Random.Range(1,5);
+		coefficient = Random.Range(1,10);
 		yield return new WaitForSeconds(time * coefficient);
 
 		StartCoroutine("makeFruit");
