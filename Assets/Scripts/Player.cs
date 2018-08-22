@@ -9,8 +9,6 @@ public class Player : MonoBehaviour {
 	public float jumpPower = 1f;
 	public int maxHealth = 3;
 
-	private GUIStyle GUIStyle = new GUIStyle();
-
 	Rigidbody2D rigid;
 	Animator animator;
 	GameObject character;
@@ -150,11 +148,8 @@ public class Player : MonoBehaviour {
 	}
 
 	void OnGUI() {
-		// Health
-		GUIStyle.fontSize = 70;
 		GUILayout.BeginArea(new Rect(0,0,Screen.width,Screen.height));
 		GUILayout.BeginVertical();
-		GUILayout.Space(8);
 		GUILayout.BeginHorizontal();
 		GUILayout.Space(12);
 

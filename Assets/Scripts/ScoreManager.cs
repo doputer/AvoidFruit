@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class ScoreManager : MonoBehaviour {
 
-	private GUIStyle GUIStyle = new GUIStyle();
-
 	static int score = 0;
 
 	public static void setScore(int value) {
@@ -17,7 +15,6 @@ public class ScoreManager : MonoBehaviour {
 	}
 
 	void OnGUI() {
-		GUIStyle.fontSize = 70;
 		GUILayout.BeginArea(new Rect(0,0,Screen.width,Screen.height));
 
 		GUILayout.BeginHorizontal();
