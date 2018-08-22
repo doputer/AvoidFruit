@@ -104,7 +104,7 @@ public class Player : MonoBehaviour {
 		if (other.gameObject.tag == "Ground") {
 			onJumping = false;
 		}
-		else if (other.gameObject.tag == "Fruit") {
+		else if (other.gameObject.tag == "Fruit" && !isUnBeatTime) {
 			Vector2 attackedVelocity = Vector2.zero;
 
 			if (other.gameObject.transform.position.x > transform.position.x) {
@@ -117,14 +117,12 @@ public class Player : MonoBehaviour {
 
 			Destroy(other.gameObject);
 
-			health--;
-
-			if (health > 1 && !isUnBeatTime) {
+			if (health > 1) {
 				isUnBeatTime = true;
 				StartCoroutine("UnBeatTime");
 			}
 
-			Debug.Log(health);
+			health--;
 		}
 	}
 
@@ -153,8 +151,8 @@ public class Player : MonoBehaviour {
 
 	void OnGUI() {
 		// Health
-		GUIStyle.fontSize = 30;
-		GUILayout.BeginArea(new Rect(0, 0, Screen.width, Screen.height));
+		GUIStyle.fontSize = 70;
+		GUILayout.BeginArea(new Rect(0,0,Screen.width,Screen.height));
 		GUILayout.BeginVertical();
 		GUILayout.Space(8);
 		GUILayout.BeginHorizontal();
@@ -164,7 +162,7 @@ public class Player : MonoBehaviour {
 		for (int i = 0; i < health; i++) {
 			heart += "♥ ";
 		}
-		GUILayout.Label(heart, GUIStyle);
+		GUILayout.Label(heart);
 
 		GUILayout.FlexibleSpace();
 		GUILayout.EndHorizontal();
