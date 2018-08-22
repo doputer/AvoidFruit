@@ -170,4 +170,5 @@ public class Player : MonoBehaviour {
 		GUILayout.EndVertical();
 		GUILayout.EndArea();
 	}
+	
 }
